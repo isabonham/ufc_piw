@@ -1,6 +1,6 @@
-# :checkered_flag: Locadora de CD's
+# :checkered_flag: Loja de CD's
 
-Uma locadora destinada a locação de CD's de artistas de vários ritmos e estilos musicais.
+Uma loja destinada a venda de CD's de artistas de vários ritmos e estilos musicais.
 
 ## :technologist: Membros da equipe
 
