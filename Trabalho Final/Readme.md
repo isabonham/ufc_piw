@@ -14,13 +14,16 @@ Curso: Design Digital.
 
 ## :people_holding_hands: Papéis ou tipos de usuário da aplicação
 
-Administrador: quem coloca os CDs no estoque do sistema;
-Vendedor: quem vai vender o produto pelo sistema;
-Cliente: quem vai receber o produto em casa, por meio de solicitação no sistema.
+- Administrador: quem coloca os CDs no estoque do sistema;
+- Vendedor: quem vai vender o produto pelo sistema;
+- Cliente: quem vai receber o produto em casa, por meio de solicitação no sistema.
 
 ## :spiral_calendar: Entidades ou tabelas do sistema
 
-Liste as principais entidades do sistema.
+- Usuário
+- CD
+- Comentário
+- Curtida
 
 ## :triangular_flag_on_post:	 Principais funcionalidades da aplicação
 
