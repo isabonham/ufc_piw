@@ -1,11 +1,16 @@
-# :checkered_flag: Locadora de CD - Música
+# :checkered_flag: NOME DO PROJETO
 
-Uma locadora destinada a locação de CD's de artistas de vários estilos e ritmos musicais.
+Breve descrição do que o seu projeto faz.
 
 ## :technologist: Membros da equipe
 
-Matrícula, nome e curso dos participantes.
+Nome: Isabela Pereira Vieira;
+Matrícula: 542302
+Curso: Design Digital;
 
+Nome: Bianca Alves Martins
+Matrícula: 542275
+Curso: Design Digital.
 ## :people_holding_hands: Papéis ou tipos de usuário da aplicação
 
 Informe aqui os tipos de usuário que irão interagir com a aplicação. Ex: administrador, locador, locatario, usuário não logado.
