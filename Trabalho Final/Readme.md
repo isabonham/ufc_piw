@@ -14,9 +14,9 @@ Curso: Design Digital.
 
 ## :people_holding_hands: Papéis ou tipos de usuário da aplicação
 
-Informe aqui os tipos de usuário que irão interagir com a aplicação. Ex: administrador, locador, locatario, usuário não logado.
-
-> Tenha em mente que obrigatoriamente a aplicação deve possuir funcionalidades acessíveis a todos os tipos de usuário e outra funcionalidades restritas a certos tipos de usuários.
+Administrador: quem coloca os CDs no estoque do sistema;
+Vendedor: quem vai vender o produto pelo sistema;
+Cliente: quem vai receber o produto em casa, por meio de solicitação no sistema.
 
 ## :spiral_calendar: Entidades ou tabelas do sistema
 
