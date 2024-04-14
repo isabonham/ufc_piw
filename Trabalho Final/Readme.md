@@ -1,6 +1,6 @@
-# :checkered_flag: NOME DO PROJETO
+# :checkered_flag: Locadora de CD - Música
 
-Breve descrição do que o seu projeto faz.
+Uma locadora destinada a locação de CD's de artistas de vários estilos e ritmos musicais.
 
 ## :technologist: Membros da equipe
 
