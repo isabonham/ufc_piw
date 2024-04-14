@@ -1,6 +1,6 @@
-# :checkered_flag: NOME DO PROJETO
+# :checkered_flag: Locadora de CD's
 
-Breve descrição do que o seu projeto faz.
+Uma locadora destinada a locação de CD's de artistas de vários ritmos e estilos musicais.
 
 ## :technologist: Membros da equipe
 
@@ -11,6 +11,7 @@ Curso: Design Digital;
 Nome: Bianca Alves Martins
 Matrícula: 542275
 Curso: Design Digital.
+
 ## :people_holding_hands: Papéis ou tipos de usuário da aplicação
 
 Informe aqui os tipos de usuário que irão interagir com a aplicação. Ex: administrador, locador, locatario, usuário não logado.
