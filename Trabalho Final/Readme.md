@@ -5,11 +5,16 @@ Uma loja destinada a venda de CD's de artistas de vários ritmos e estilos music
 ## :technologist: Membros da equipe
 
 Nome: Isabela Pereira Vieira;
-Matrícula: 542302
-Curso: Design Digital;
 
-Nome: Bianca Alves Martins
-Matrícula: 542275
+Matrícula: 542302;
+
+Curso: Design Digital.
+
+
+Nome: Bianca Alves Martins;
+
+Matrícula: 542275;
+
 Curso: Design Digital.
 
 ## :people_holding_hands: Papéis ou tipos de usuário da aplicação
@@ -27,17 +32,18 @@ Curso: Design Digital.
 
 ## :triangular_flag_on_post:	 Principais funcionalidades da aplicação
 
-- O usuário cliente não registrado pode ver os cd's em estoque, comprar e fazer comentários.
-- O usuário cliente registrado pode adicionalmente comprar um cd.
-- O usuário vendedor pode solicitar a adição e remover (vender) cd's do estoque.
+- O usuário cliente não registrado pode ver os cd's em estoque e ver comentários;
+- O usuário cliente registrado pode adicionalmente comprar um cd e fazer comentários;
+- O usuário vendedor pode solicitar a adição e remover (vender) cd's do estoque;
 - O usuário administrador pode adicionar, remover e editar os detalhes do cd.
+
+<!---
 
 ----
 
 :warning::warning::warning: As informações a seguir devem ser enviadas juntamente com a versão final do projeto. :warning::warning::warning:
-
-
 ----
+
 
 ## :desktop_computer: Tecnologias e frameworks utilizados
 
@@ -67,3 +73,5 @@ Lista as tecnologias, frameworks e bibliotecas utilizados.
 | --- | --- |
 | GET | api/entidade1/|
 | POST | api/entidade2 |
+
+--->
