@@ -27,8 +27,10 @@ Curso: Design Digital.
 
 ## :triangular_flag_on_post:	 Principais funcionalidades da aplicação
 
-Descreve ou liste brevemente as principais funcionalidades da aplicação que será desenvolvida. Destaque a funcionalidades que serão acessévies a todos os usuários e aquelas restriras a usuários logados.
-
+- O usuário cliente não registrado pode ver os cd's em estoque, comprar e fazer comentários.
+- O usuário cliente registrado pode adicionalmente comprar um cd.
+- O usuário vendedor pode solicitar a adição e remover (vender) cd's do estoque.
+- O usuário administrador pode adicionar, remover e editar os detalhes do cd.
 
 ----
 
