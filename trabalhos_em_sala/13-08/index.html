@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .concluded {
+      text-decoration: line-through;
+    }
+  </style>
+</head>
+<body>
+  <div id="app">
+    <form @submit.prevent="addTask">
+      <label>
+        Descrição:
+        <input type="text" v-model="inputDescription"> 
+      </label>
+      <label>
+        Categoria:
+        <select v-model="selectCategoria">
+          <option v-for="cat in categorias" :value="cat">
+            {{ cat }}
+          </option>
+        </select> 
+      </label>
+      <input type="submit" :disabled="isEmpty">
+    </form>
+
+    <task-list
+        description="tarefas a fazer"
+        empty="nenhuma tarefa adicionada"
+        :tasks="nConcluidas" >
+    </task-list>
+    <task-list
+        description="tarefas concluidas"
+        empty="nenhuma tarefa adicionada"
+        :tasks="concluidas" > 
+    </task-list>
+
+  </div>
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <script src="todo.js"></script>
+</body>
+</html>
