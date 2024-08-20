@@ -12,31 +12,40 @@
 </head>
 <body>
   <div id="app">
-    <form @submit.prevent="addTask">
-      <label>
-        Descrição:
-        <input type="text" v-model="inputDescription"> 
-      </label>
-      <label>
-        Categoria:
-        <select v-model="selectCategoria">
-          <option v-for="cat in categorias" :value="cat">
-            {{ cat }}
-          </option>
-        </select> 
-      </label>
-      <input type="submit" :disabled="isEmpty">
-    </form>
 
-    <task-list
-        description="tarefas a fazer"
-        empty="nenhuma tarefa adicionada"
-        :tasks="nConcluidas" >
+    <task-form @add="addTask"></task-form>
+    
+    <task-list 
+      description="Tarefas a fazer"
+      empty="Nenhum tarefa cadastrada"
+      :tasks="tasks">
+      <task-item v-for="task in tasks" 
+        :id="task.id"
+        :categoria="task.categoria"
+        :description="task.description"
+        :concluded="task.concluded"
+        :class="{
+          concluded: task.concluded
+        }"
+        @delete="remove"
+        ></task-item>
     </task-list>
-    <task-list
-        description="tarefas concluidas"
-        empty="nenhuma tarefa adicionada"
-        :tasks="concluidas" > 
+    
+
+    <task-list 
+      description="Tarefas concluídas"
+      empty="Nenhuma tarefa concluída"
+      :tasks="concluidas">
+      <task-item v-for="task in tasks" 
+        :id="task.id"
+        :categoria="task.categoria"
+        :description="task.description"
+        :concluded="task.concluded"
+        :class="{
+          concluded: task.concluded
+        }"
+        @delete="remove"
+        ></task-item>
     </task-list>
 
   </div>
