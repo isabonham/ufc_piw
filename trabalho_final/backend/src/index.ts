@@ -55,6 +55,26 @@ app.get('/users', (req, res) => {
   })
 })
 
+//API get (listar usuários pelo ID)
+app.get('/users/:id', (req, res) => {
+  const {id} = req.params
+  const user = users.find(u=> u.id === parseInt(id))
+
+  if (!user) {
+    return res.status(400).json({
+      error: {
+        status: 400,
+        name: 'NotFound',
+        message: 'Usuário não encontrado'
+      }
+    })
+  }
+
+  res.json({
+    data: user
+  })
+})
+
 app.listen(port, () => {
     console.log(`Servidor executando na port ${port} em http://localhost:${port}`)
 }) 
