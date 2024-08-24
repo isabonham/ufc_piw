@@ -96,37 +96,6 @@ app.delete('/users/:id', (req, res) => {
   })
 })
 
-// API update user
-app.put('/users/:id', (req, res) => {
-  const { id } = req.params
-  const {name, username, email, password, role} = req.body
-  const userIndex = users.findIndex(u => u.id === parseInt(id))
-
-  if (userIndex === -1) {
-      return res.status(404).json({
-          error: {
-              status: 404,
-              name: 'NotFound',
-              message: 'Usuário não encontrado'
-          }
-      })
-  }
-
-  const updateUser = {
-      id: parseInt(id),
-      name: name || users[userIndex].name,
-      username : username || users[userIndex].username,
-      email : email || users[userIndex].email,
-      password : password || users[userIndex].password,
-      role : role || users[userIndex].role,
-  }
-
-  users[userIndex] = updateUser
-  res.status(200).json({
-      data: updateUser
-  })
-})
-
 app.listen(port, () => {
     console.log(`Servidor executando na port ${port} em http://localhost:${port}`)
 }) 
