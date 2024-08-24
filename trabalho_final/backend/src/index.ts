@@ -48,6 +48,13 @@ app.post('/users', (req, res) => {
   })
 })
 
+//API get (listar usuários)
+app.get('/users', (req, res) => {
+  res.json ({
+    data: users
+  })
+})
+
 app.listen(port, () => {
     console.log(`Servidor executando na port ${port} em http://localhost:${port}`)
 }) 
