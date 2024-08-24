@@ -55,7 +55,7 @@ app.get('/users', (req, res) => {
   })
 })
 
-//API get (listar usuários pelo ID)
+//API get (listar usuário pelo ID)
 app.get('/users/:id', (req, res) => {
   const {id} = req.params
   const user = users.find(u=> u.id === parseInt(id))
@@ -72,6 +72,27 @@ app.get('/users/:id', (req, res) => {
 
   res.json({
     data: user
+  })
+})
+
+//API delete (deletar usuário)
+app.delete('/users/:id', (req, res) => {
+  const{id} = req.params
+  const userIndex = users.findIndex(u => u.id === parseInt(id))
+
+  if (userIndex === -1) {
+    return res.status(404).json ({
+      error: {
+        status: 404,
+        name: 'NotFound',
+        message: 'Usuário não encontrado'
+      }
+    })
+  }
+
+  const deletedUser = users.splice(userIndex, 1) [0]
+  res.status(200).json({
+    data: deletedUser
   })
 })
 
