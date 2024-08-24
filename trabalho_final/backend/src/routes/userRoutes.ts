@@ -1,15 +1,7 @@
 import { Router} from "express";
+import { User } from "../entity/User"
 
 const router = Router() 
-
-interface User {
-    id: number;
-    name: string;
-    username: string;
-    email: string;
-    password: string;
-    role: string;
-}
   
 const users: User[] = [];
   
