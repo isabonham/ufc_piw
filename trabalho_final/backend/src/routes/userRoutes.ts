@@ -54,10 +54,11 @@ router.get('/users', async (req, res) => {
     })
 })
   
-//API get (listar usuário pelo ID)
-router.get('/users/:id', (req, res) => {
+//API get (listar usuário pelo ID) --- já integrada ao BD
+router.get('/users/:id', async (req, res) => {
     const {id} = req.params
-    const user = users.find(u=> u.id === parseInt(id))
+    const userRepository = AppDataSource.getRepository(User)
+    const user = await userRepository.findOne({ where: { id:parseInt(id) }, relations: ['role'] })
   
     if (!user) {
         return res.status(400).json({
