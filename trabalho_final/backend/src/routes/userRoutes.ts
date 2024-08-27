@@ -45,8 +45,10 @@ router.post('/users', async (req, res) => {
     })
 })
   
-//API get (listar usuários)
-router.get('/users', (req, res) => {
+//API get (listar usuários) --- já integrada ao BD
+router.get('/users', async (req, res) => {
+    const userRepository = AppDataSource.getRepository(User)
+    const users = await userRepository.find({ relations: ['role'] })
     res.json ({
         data: users
     })
