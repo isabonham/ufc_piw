@@ -1,14 +1,14 @@
 import { Column, Entity, OneToMany, PrimaryGeneratedColumn } from "typeorm";
-import { User } from './User'
+import { User } from "./User"
 
 @Entity()
 export class Role {
     @PrimaryGeneratedColumn()
-    id: number
+    id!: number
 
     @Column()
-    name: string
+    name!: string
 
     @OneToMany(()=> User, user => user.role)
-    users: User[]
+    users!: User[]
 }
