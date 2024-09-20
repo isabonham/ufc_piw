@@ -1,6 +1,7 @@
 import express from 'express'
 import userRoutes from './routes/userRoutes'
 import { AppDataSource } from './DataSource'
+import authRoutes from './routes/AuthRoutes';
 
 async function startServer() {
     try {
@@ -14,6 +15,7 @@ async function startServer() {
         //});
     
         app.use(express.json())
+        app.use('/auth', authRoutes);
         app.use('/', userRoutes)
     
         app.listen(port, () => {
