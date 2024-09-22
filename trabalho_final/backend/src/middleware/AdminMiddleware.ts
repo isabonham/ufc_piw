@@ -8,5 +8,5 @@ export const isAdmin = (req: Request, res: Response, next: NextFunction) => {
         return res.status(403).json({ message: 'Acesso negado. Somente administradores podem acessar.' });
     }
     console.log('Usuário é admin. Prosseguindo...');
-    next();  // Passa para a rota final
+    next(); 
 };

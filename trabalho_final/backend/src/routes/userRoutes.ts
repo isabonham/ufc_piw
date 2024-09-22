@@ -78,7 +78,7 @@ router.delete('/users/:id', authenticateToken, async (req, res) => {
     const { id } = req.params;
     const currentUser = (req as any).user;
 
-    if (!currentUser || currentUser.role.name !== 'admin') {
+    if (!currentUser || currentUser.role !== 'admin') {
         return res.status(403).json({ error: 'Acesso negado. Somente administradores podem deletar usuários.' });
     }
 
@@ -119,16 +119,15 @@ router.put('/users/:id', authenticateToken, async (req, res) => {
     }
 
     // Permitir atualização apenas se for o próprio usuário ou um administrador
-    if (currentUser.id !== userToUpdate.id && currentUser.role.name !== 'admin') {
+    if (currentUser.id !== userToUpdate.id && currentUser.role !== 'admin') {
         return res.status(403).json({ error: 'Acesso negado. Você só pode atualizar seu próprio cadastro.' });
     }
 
-    // Atualiza os campos conforme necessário
     userToUpdate.name = name || userToUpdate.name;
     userToUpdate.username = username || userToUpdate.username;
     userToUpdate.email = email || userToUpdate.email;
     userToUpdate.password = password || userToUpdate.password;
-    userToUpdate.role = role || userToUpdate.role; // Esta linha pode precisar de ajuste se o papel for alterado
+    userToUpdate.role = role || userToUpdate.role; 
 
     await userRepository.save(userToUpdate);
     res.status(200).json({ data: userToUpdate });
