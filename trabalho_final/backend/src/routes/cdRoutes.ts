@@ -10,6 +10,10 @@ const router = Router();
 router.post('/', authenticateToken, isAdmin, async (req, res) => {
     const { title, artist, price, stock } = req.body;
 
+    if (!title || !artist || typeof price !== 'number' || price <= 0 || typeof stock !== 'number' || stock < 0) {
+        return res.status(400).json({ message: 'Dados inválidos' });
+    }
+    
     if (!title || !artist || !price || !stock) {
         return res.status(400).json({ message: 'Dados incompletos' });
     }
