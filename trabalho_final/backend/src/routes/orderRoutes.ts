@@ -40,12 +40,11 @@ router.post('/', async (req, res) => {
         orderItem.price = cd.price * item.quantity;
         totalAmount += orderItem.price;
 
-        orderItems.push(orderItem);
-
         cd.stock -= item.quantity; 
         await cdRepository.save(cd); 
 
         const savedOrderItem = await orderItemRepository.save(orderItem); 
+
         orderItems.push(savedOrderItem);
     }
 
@@ -54,6 +53,7 @@ router.post('/', async (req, res) => {
 
     res.status(201).json({ data: newOrder });
 });
+
 
 // Listar pedidos
 router.get('/', async (req, res) => {
